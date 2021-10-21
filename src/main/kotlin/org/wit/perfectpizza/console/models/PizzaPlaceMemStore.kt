@@ -33,7 +33,13 @@ class PizzaPlaceMemStore : PizzaPlaceStore {
         if (foundPizzaPlace != null) {
             foundPizzaPlace.name = pizzaPlace.name
             foundPizzaPlace.location = pizzaPlace.location
+            foundPizzaPlace.choice = pizzaPlace.choice
+            foundPizzaPlace.review = pizzaPlace.review
         }
+    }
+
+    override fun delete(pizzaPlace: PizzaPlaceModel) {
+        pizzaPlaces.remove(pizzaPlace)
     }
 
     internal fun logAll() {

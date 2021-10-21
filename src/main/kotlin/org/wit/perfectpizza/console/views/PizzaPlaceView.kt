@@ -1,6 +1,7 @@
 package org.wit.perfectpizza.console.views
 
 import org.wit.perfectpizza.console.main.pizzaPlaces
+import org.wit.perfectpizza.console.models.PizzaPlaceJSONStore
 import org.wit.perfectpizza.console.models.PizzaPlaceMemStore
 import org.wit.perfectpizza.console.models.PizzaPlaceModel
 
@@ -16,6 +17,7 @@ class PizzaPlaceView {
         println(" 2. Update an existing Pizza Place review")
         println(" 3. List all reviewed Pizza Places")
         println(" 4. Search for a Pizza Place review")
+        println(" 5. Delete a review for a Pizza Place")
         println("-1. Exit")
         println()
         print("Choose an option : ")
@@ -28,8 +30,7 @@ class PizzaPlaceView {
 
     }
 
-    fun listAllPizzaPlaces(pizzaPlaces : PizzaPlaceMemStore) {
-        println("You chose to list all pizza place reviews")
+    fun listAllPizzaPlaces(pizzaPlaces : PizzaPlaceJSONStore) {
         println()
         pizzaPlaces.logAll()
         println()
@@ -49,8 +50,12 @@ class PizzaPlaceView {
         pizzaPlace.name = readLine()!!
         print("Enter where the pizza place is located : ")
         pizzaPlace.location = readLine()!!
+        print("Enter the type of pizza you ordered here :")
+        pizzaPlace.choice = readLine()!!
+        print("Enter your review : ")
+        pizzaPlace.review = readLine()!!
 
-        return  pizzaPlace.name.isNotEmpty() && pizzaPlace.location.isNotEmpty()
+        return  pizzaPlace.name.isNotEmpty() && pizzaPlace.location.isNotEmpty() && pizzaPlace.review.isNotEmpty() && pizzaPlace.choice.isNotEmpty()
 
     }
 
@@ -58,6 +63,8 @@ class PizzaPlaceView {
 
         var tempName : String?
         var tempLocation : String?
+        var tempChoice : String?
+        var tempReview : String?
 
         if(pizzaPlace != null ) {
             print("Enter an updated Name for [ " + pizzaPlace.name +" ] : ")
@@ -65,10 +72,18 @@ class PizzaPlaceView {
             print("Enter the new location for [ " + pizzaPlace.name +
                     " ], the old one is [" + pizzaPlace.location +"] : ")
             tempLocation = readLine()!!
+            print("Update the pizza you purchased at [ " + pizzaPlace.name +
+                    " : ")
+            tempChoice = readLine()!!
+            print("Update your review for [" + pizzaPlace.name + " ] :")
+            tempReview = readLine()!!
 
-            if(!tempName.isNullOrEmpty() && !tempLocation.isNullOrEmpty()) {
+
+            if(!tempName.isNullOrEmpty() && !tempLocation.isNullOrEmpty() && !tempReview.isNullOrEmpty()) {
                 pizzaPlace.name = tempName
                 pizzaPlace.location = tempLocation
+                pizzaPlace.choice = tempChoice
+                pizzaPlace.review = tempReview
                 return true
             }
         }
@@ -79,7 +94,7 @@ class PizzaPlaceView {
     fun getId() : Long {
         var stringId : String?
         var searchId : Long
-        print("Enter id to Search/Update : ")
+        print("Enter id to Search/Update/Delete : ")
         stringId = readLine()!!
         searchId = if (stringId.toLongOrNull() != null && !stringId.isEmpty())
             stringId.toLong()
