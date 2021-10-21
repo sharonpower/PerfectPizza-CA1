@@ -1,12 +1,8 @@
 package org.wit.perfectpizza.console.controllers
 
 import mu.KotlinLogging
-import org.wit.perfectpizza.console.main.addPizzaPlace
-import org.wit.perfectpizza.console.main.search
-import org.wit.perfectpizza.console.main.searchPizzaPlaces
-import org.wit.perfectpizza.console.main.updatePizzaPlace
 import org.wit.perfectpizza.console.models.PizzaPlaceJSONStore
-import org.wit.perfectpizza.console.models.PizzaPlaceMemStore
+//import org.wit.perfectpizza.console.models.PizzaPlaceMemStore
 import org.wit.perfectpizza.console.models.PizzaPlaceModel
 import org.wit.perfectpizza.console.views.PizzaPlaceView
 

@@ -5,5 +5,26 @@
     "location": "Chicago",
     "review": " Best pizza I have ever had! Will recommend!",
     "choice": "Deep Dish Meat Feast"
+  },
+  {
+    "id": -3195786942370181683,
+    "name": "Robertos",
+    "location": "Carrick-On-Suir",
+    "review": "Tasty Pizza, too much cheese though",
+    "choice": "Pepperoni"
+  },
+  {
+    "id": -3553729766260228786,
+    "name": "Jimmys",
+    "location": "Portlaw",
+    "review": "Pizza a bit too greasy",
+    "choice": "Margherita"
+  },
+  {
+    "id": -2345958407581830949,
+    "name": "Dominoes",
+    "location": "Dungarvan",
+    "review": "Base was really thick when I asked for thin",
+    "choice": "Meat Feast"
   }
 ]

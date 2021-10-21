@@ -1,9 +1,9 @@
 package org.wit.perfectpizza.console.views
 
-import org.wit.perfectpizza.console.main.pizzaPlaces
 import org.wit.perfectpizza.console.models.PizzaPlaceJSONStore
 import org.wit.perfectpizza.console.models.PizzaPlaceMemStore
 import org.wit.perfectpizza.console.models.PizzaPlaceModel
+
 
 class PizzaPlaceView {
 
@@ -12,15 +12,18 @@ class PizzaPlaceView {
         var option : Int
         var input: String?
 
-        println("Main Menu")
-        println(" 1. Add a Pizza Place review")
-        println(" 2. Update an existing Pizza Place review")
-        println(" 3. List all reviewed Pizza Places")
-        println(" 4. Search for a Pizza Place review")
-        println(" 5. Delete a review for a Pizza Place")
-        println("-1. Exit")
+        com.github.mm.coloredconsole.println{"___________________________________________".red.bg.faint}
+        com.github.mm.coloredconsole.println{"________________MAIN MENU__________________".white.underline}
+        com.github.mm.coloredconsole.println{"___________________________________________".red.bg.faint}
+
+        com.github.mm.coloredconsole.println{" 1. Add a Pizza Place review".italic}
+        com.github.mm.coloredconsole.println{" 2. Update an existing Pizza Place review".italic}
+        com.github.mm.coloredconsole.println{" 3. List all reviewed Pizza Places".italic}
+        com.github.mm.coloredconsole.println{" 4. Search for a Pizza Place review".italic}
+        com.github.mm.coloredconsole.println{" 5. Delete a review for a Pizza Place".italic}
+        com.github.mm.coloredconsole.println{"-1. Exit".italic}
         println()
-        print("Choose an option : ")
+        com.github.mm.coloredconsole.println{"_____________Choose an Option :____________".white.underline.italic}
         input = readLine()!!
         option = if (input.toIntOrNull() != null && !input.isEmpty())
             input.toInt()
@@ -73,9 +76,9 @@ class PizzaPlaceView {
                     " ], the old one is [" + pizzaPlace.location +"] : ")
             tempLocation = readLine()!!
             print("Update the pizza you purchased at [ " + pizzaPlace.name +
-                    " : ")
+                    "] : ")
             tempChoice = readLine()!!
-            print("Update your review for [" + pizzaPlace.name + " ] :")
+            print("Update your review for [" + pizzaPlace.name + "] :")
             tempReview = readLine()!!
 
 
@@ -102,7 +105,4 @@ class PizzaPlaceView {
             -9
         return searchId
     }
-
-
-
 }

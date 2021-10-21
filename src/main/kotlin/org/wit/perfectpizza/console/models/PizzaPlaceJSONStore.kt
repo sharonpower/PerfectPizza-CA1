@@ -18,7 +18,6 @@ fun generateRandId(): Long {
     return Random().nextLong()
 }
 
-
 class PizzaPlaceJSONStore : PizzaPlaceStore {
 
     var pizzaPlaces = mutableListOf<PizzaPlaceModel>()

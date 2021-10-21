@@ -6,5 +6,4 @@ data class PizzaPlaceModel (
             var location: String = "",
             var review: String = "",
             var choice: String = ""
-            //var rating: Int
 )
