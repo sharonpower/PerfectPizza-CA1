@@ -63,7 +63,7 @@ class PizzaPlaceView {
         }
         catch(e: NumberFormatException) {
             println()
-            com.github.mm.coloredconsole.println{"Please do not leave a field empty!".bright.yellow.bold.reverse}
+            com.github.mm.coloredconsole.println{"Please Enter Fields Correctly!".bright.yellow.bold.reverse}
             println()
         }
 
@@ -110,7 +110,7 @@ class PizzaPlaceView {
         }
         catch (e: NumberFormatException){
             println()
-            com.github.mm.coloredconsole.println{"Please do not leave a field empty!".yellow.reverse}
+            com.github.mm.coloredconsole.println{"Please Enter Fields Correctly!".yellow.reverse}
             println()
         }
         return false
