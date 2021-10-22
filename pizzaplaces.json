@@ -1,30 +1,26 @@
 [
   {
-    "id": -2337670362170876761,
-    "name": "Pizza Palace",
-    "location": "Chicago",
-    "review": " Best pizza I have ever had! Will recommend!",
-    "choice": "Deep Dish Meat Feast"
-  },
-  {
-    "id": -3195786942370181683,
+    "id": 742876275946151410,
     "name": "Robertos",
     "location": "Carrick-On-Suir",
     "review": "Tasty Pizza, too much cheese though",
-    "choice": "Pepperoni"
+    "choice": "Pepperoni",
+    "rating": 7
   },
   {
-    "id": -3553729766260228786,
+    "id": -1006864826863757828,
     "name": "Jimmys",
     "location": "Portlaw",
     "review": "Pizza a bit too greasy",
-    "choice": "Margherita"
+    "choice": "Margherita",
+    "rating": 4
   },
   {
-    "id": -2345958407581830949,
+    "id": 7030532598560555650,
     "name": "Dominoes",
     "location": "Dungarvan",
     "review": "Base was really thick when I asked for thin",
-    "choice": "Meat Feast"
+    "choice": "Meat Feast",
+    "rating": 2
   }
 ]

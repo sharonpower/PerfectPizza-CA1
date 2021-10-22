@@ -97,9 +97,9 @@ class PizzaPlaceController {
     }
 
     fun prepopulatedData() {
-        pizzaPlaces.create(PizzaPlaceModel(1, "Robertos", "Carrick-On-Suir", "Tasty Pizza, too much cheese though", "Pepperoni"))
-        pizzaPlaces.create(PizzaPlaceModel(2, "Jimmys", "Portlaw", "Pizza a bit too greasy", "Margherita"))
-        pizzaPlaces.create(PizzaPlaceModel(3, "Dominoes", "Dungarvan", "Base was really thick when I asked for thin", "Meat Feast"))
+        pizzaPlaces.create(PizzaPlaceModel(1, "Robertos", "Carrick-On-Suir", "Tasty Pizza, too much cheese though", "Pepperoni", 7))
+        pizzaPlaces.create(PizzaPlaceModel(2, "Jimmys", "Portlaw", "Pizza a bit too greasy", "Margherita", 4))
+        pizzaPlaces.create(PizzaPlaceModel(3, "Dominoes", "Dungarvan", "Base was really thick when I asked for thin", "Meat Feast", 2))
     }
 
 }
